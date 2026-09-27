@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = [
+    "nodes/move_box/control_node",
+    "nodes/move_box/sim_node"
+]
+
+[workspace.dependencies]
+anyhow = "1.0.100"
+arrow = "54.0.0"
+dora-node-api = "0.3.13"
+eyre = "0.6.12"
+mujoco-rs = "2.2.1"

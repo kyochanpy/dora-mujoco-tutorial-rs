@@ -1,0 +1,17 @@
+nodes:
+  - id: simulator
+    # path: ../simulation/move_box.sh
+    path: cargo
+    args: "run --release -p move_box_simulation"
+    inputs:
+      control: controller/action
+    outputs:
+      - observation
+
+  - id: controller
+    path: cargo
+    args: "run --release -p move_box_control"
+    inputs:
+      observation: simulator/observation
+    outputs:
+      - action

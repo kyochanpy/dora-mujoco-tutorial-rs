@@ -1,0 +1,11 @@
+[package]
+name = "move_box_control"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dora-node-api = { workspace = true }
+arrow = { workspace = true }
+anyhow = { workspace = true }
+eyre = { workspace = true }
+mujoco-rs = { workspace = true }

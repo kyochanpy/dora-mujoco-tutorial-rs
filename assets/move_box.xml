@@ -1,0 +1,24 @@
+<mujoco>
+  <option timestep="0.002" gravity="0 0 -9.81" />
+  <worldbody>
+    <light diffuse=".5 .5 .5" pos="0 0 3" dir="0 0 -1" />
+    <geom type="plane" size="1 1 0.1" rgba=".9 .9 .9 1" />
+
+    <body pos="0 0 0.1">
+      <joint
+                type="slide"
+                axis="1 0 0"
+                name="slider"
+                damping="0.5"
+                limited="true"
+                range="-0.5 0.5"
+            />
+
+      <geom type="box" size="0.1 0.1 0.1" rgba="0.8 0.2 0.2 1" />
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor joint="slider" name="actuator" gear="5" />
+  </actuator>
+</mujoco>

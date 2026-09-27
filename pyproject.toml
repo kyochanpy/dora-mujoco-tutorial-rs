@@ -1,0 +1,16 @@
+[project]
+name = "dora-mujoco-tutorial-rs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dora-rs>=0.3.13",
+    "mujoco>=3.4.0",
+    "pyarrow>=22.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.10",
+]
